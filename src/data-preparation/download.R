@@ -3,7 +3,7 @@
 
 library(tidyverse)
 library(readr)
-library(dplr)
+library(dplyr)
 
 get_data <- function(url, filename){
   download.file(url = url, destfile = paste0(filename, ".csv"))

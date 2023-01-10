@@ -3,7 +3,7 @@
 
 library(tidyverse)
 library(readr)
-library(dplr)
+library(dplyr)
 
 # import the relevant dataset
 

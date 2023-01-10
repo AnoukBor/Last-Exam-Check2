@@ -2,7 +2,7 @@
 
 library(tidyverse)
 library(readr)
-library(dplr)
+library(dplyr)
 
 reviews <- read_csv("../../data/reviews.csv")
 listings <- read_csv("../../data/listings.csv")

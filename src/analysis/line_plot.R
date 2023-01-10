@@ -2,7 +2,7 @@
 
 library(tidyverse)
 library(readr)
-library(dplr)
+library(dplyr)
 
 df_aggregated <- read_csv("../../gen/temp/df_aggregated.csv")
 
