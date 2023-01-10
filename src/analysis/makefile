@@ -1,13 +1,8 @@
-
-
-all: ../../gen/output/plot_all.pdf ../../gen/output/plot_antwerp.pdf
+all: ../../gen/output/histogram.pdf ../../gen/output/plot.pdf
 		
-../../gen/output/plot_all.pdf: ../../gen/temp/aggregated_df.csv ../analysis/plot_all.R
+../../gen/output/histogram.pdf: ../../gen/temp/df_listings_merged.csv ../analysis/histogram.R
 		mkdir -p ../../gen/output
 		R --vanilla < ../analysis/plot_all.R
-		
-../../gen/temp/pivot_table.csv: ../../gen/temp/aggregated_df.csv ../analysis/create_pivot.R
-		R --vanilla < ../analysis/create_pivot.R
 
-../../gen/output/plot_antwerp.pdf: ../../gen/temp/pivot_table.csv ../analysis/plot_antwerp.R
-		R --vanilla < ../analysis/plot_antwerp.R
+../../gen/output/plot.pdf: ../../gen/temp/df_aggregated.csv ../analysis/line_plot.R
+		R --vanilla < ../analysis/line_plot.R
