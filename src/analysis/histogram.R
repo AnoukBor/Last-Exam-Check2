@@ -7,7 +7,9 @@ library(dplr)
 
 # import the relevant dataset
 
-pdf("histogram.pdf")
+df_listings_merged <- read_csv("../../gen/temp/df_listings_merged.csv")
+
+pdf("../../gen/output/histogram.pdf")
 hist(df_listings_merged$num_reviews,
      main = "The distribution of the number of reviews per listing\nwhere number of reviews is between 2 and 100",
      xlab = "Number of reviews",

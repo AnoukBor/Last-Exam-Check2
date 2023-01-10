@@ -4,6 +4,8 @@ library(tidyverse)
 library(readr)
 library(dplr)
 
+df_aggregated <- read_csv("../../gen/temp/df_aggregated.csv")
+
 # convert the `date` column into date format.
 df_aggregated$date <- as.Date(df_aggregated$date)
 
@@ -11,7 +13,7 @@ df_aggregated$date <- as.Date(df_aggregated$date)
 df_groupby <- df_aggregated %>% group_by(date) %>% summarise(num_reviews = sum(num_reviews))
 
 # plot the chart and store the visualisation.
-pdf("plot.pdf")
+pdf("../../gen/output/plot.pdf")
 plot(x = df_groupby$date, 
      y = df_groupby$num_reviews, 
      type = "l", 

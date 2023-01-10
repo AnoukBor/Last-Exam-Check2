@@ -4,8 +4,8 @@ library(tidyverse)
 library(readr)
 library(dplr)
 
-reviews <- read_csv("reviews.csv")
-listings <- read_csv("listings.csv")
+reviews <- read_csv("../../data/reviews.csv")
+listings <- read_csv("../../data/listings.csv")
 
 # filter for reviews published since 2017
 reviews_filtered <- reviews %>% filter(date >= "2017-01-01")
@@ -19,4 +19,7 @@ df_merged <- reviews_filtered %>%
 
 # group the number of reviews by listing (1)
 df_listings_merged <- df_merged %>% group_by(listing_id) %>% summarise(num_reviews = n()) %>% arrange(desc(num_reviews)) %>% filter(num_reviews <= 100)
+
+write.csv(df_merged, "../../gen/temp/df_merged.csv")
+write.csv(df_listings_merged, "../../gen/temp/df_listings_merged.csv")
 

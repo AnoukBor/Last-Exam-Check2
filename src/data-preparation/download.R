@@ -12,5 +12,5 @@ get_data <- function(url, filename){
 url_listings <- "http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-06-05/visualisations/listings.csv"
 url_reviews <- "http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-06-05/visualisations/reviews.csv"
 
-get_data(url_listings, "listings")
-get_data(url_reviews, "reviews")
+get_data(url_listings, "../../data/listings")
+get_data(url_reviews, "../../data/reviews")
