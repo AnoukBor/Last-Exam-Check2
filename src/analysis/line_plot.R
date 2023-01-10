@@ -1,5 +1,9 @@
 # 2.2 CREATE LINE PLOT
 
+library(tidyverse)
+library(readr)
+library(dplr)
+
 # convert the `date` column into date format.
 df_aggregated$date <- as.Date(df_aggregated$date)
 

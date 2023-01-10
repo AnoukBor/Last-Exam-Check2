@@ -1,6 +1,9 @@
 # 2.0 REPORTING
-
 ## 2.1 CREATE HISTOGRAM
+
+library(tidyverse)
+library(readr)
+library(dplr)
 
 # import the relevant dataset
 

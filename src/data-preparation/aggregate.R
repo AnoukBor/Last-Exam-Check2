@@ -1,5 +1,9 @@
 ## 1.3 AGGREGATE THE DATA 
 
+library(tidyverse)
+library(readr)
+library(dplr)
+
 # group the number of reviews by month and neighborhood group.(2)
 df_aggregated <- df_merged %>%
   mutate(month = format(date, "%m"), year = format(date, "%Y")) %>%
